@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import ch.rallo.mfgt.widget.R;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +19,12 @@ public class WebcamActivity extends FragmentActivity {
 		setContentView(R.layout.webcam);
 
 		List<Fragment> fragments = getFragments();
-		WebcamPageAdapter pageAdapter = new WebcamPageAdapter(getSupportFragmentManager(), fragments);
+		WebcamPagerAdapter pagerAdapter = new WebcamPagerAdapter(getSupportFragmentManager(), fragments);
 		ViewPager pager = (ViewPager) findViewById(R.id.webcamPager);
-		pager.setAdapter(pageAdapter);
+		pager.setAdapter(pagerAdapter);
+
+		CirclePageIndicator circlePageIndicator = (CirclePageIndicator) findViewById(R.id.circles);
+		circlePageIndicator.setViewPager(pager);
 	}
 
 	private List<Fragment> getFragments() {

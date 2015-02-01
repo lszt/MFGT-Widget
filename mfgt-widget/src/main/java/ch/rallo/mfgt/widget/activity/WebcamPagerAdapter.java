@@ -6,11 +6,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-class WebcamPageAdapter extends FragmentPagerAdapter {
+class WebcamPagerAdapter extends FragmentPagerAdapter {
 
 	private final List<Fragment> fragments;
 
-	public WebcamPageAdapter(FragmentManager fragmentManager, List<Fragment> fragments) {
+	public WebcamPagerAdapter(FragmentManager fragmentManager, List<Fragment> fragments) {
 		super(fragmentManager);
 		this.fragments = fragments;
 	}
