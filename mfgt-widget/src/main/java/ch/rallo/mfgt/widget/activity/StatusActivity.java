@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import ch.rallo.mfgt.widget.R;
+import ch.rallo.mfgt.widget.bean.AerodromeStatus;
 import ch.rallo.mfgt.widget.utils.RequestSingleton;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.google.gson.Gson;
 
 public class StatusActivity extends Activity {
 
@@ -22,8 +24,10 @@ public class StatusActivity extends Activity {
 		String statusUrl = getApplication().getString(R.string.status_url);
 		StringRequest request = new StringRequest(statusUrl, new Response.Listener<String>() {
 			@Override
-			public void onResponse(String statusHtml) {
-				webView.loadData(statusHtml, "text/html", "UTF-8");
+			public void onResponse(String statusJson) {
+				AerodromeStatus status = new Gson().fromJson(statusJson, AerodromeStatus.class);
+				String html = new StatusHtmlGenerator(status).generate();
+				webView.loadData(html, "text/html", "UTF-8");
 			}
 		}, new Response.ErrorListener() {
 			public void onErrorResponse(VolleyError error) {

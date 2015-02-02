@@ -1,6 +1,6 @@
 <resources>
 	<string name="app_name">MFGT Widget</string>
 	<string name="mfgt_url">http://www.mfgt.ch</string>
-	<string name="status_url">http://status.mfgt.ch/t3v2status.php</string>
+	<string name="status_url">https://mfgt-api.appspot.com/api/v1/aerodromestatus</string>
 	<string name="webcams">http://webcam.mfgt.ch/eh.jpg,http://webcam.mfgt.ch/wh.jpg</string>
 </resources>
