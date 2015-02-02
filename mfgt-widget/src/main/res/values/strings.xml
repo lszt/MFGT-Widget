@@ -2,5 +2,6 @@
 	<string name="app_name">MFGT Widget</string>
 	<string name="mfgt_url">http://www.mfgt.ch</string>
 	<string name="status_url">https://mfgt-api.appspot.com/api/v1/aerodromestatus</string>
+	<string name="reservations_url">https://mfgt-api.appspot.com/api/v1/reservations</string>
 	<string name="webcams">http://webcam.mfgt.ch/eh.jpg,http://webcam.mfgt.ch/wh.jpg</string>
 </resources>

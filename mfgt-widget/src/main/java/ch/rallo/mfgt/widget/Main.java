@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.RemoteViews;
+import ch.rallo.mfgt.widget.activity.ReservationsActivity;
 import ch.rallo.mfgt.widget.activity.StatusActivity;
 import ch.rallo.mfgt.widget.activity.WebcamActivity;
 
@@ -22,6 +23,7 @@ public class Main extends AppWidgetProvider {
 
 			views.setOnClickPendingIntent(R.id.statusButton, getActivity(context, StatusActivity.class));
 			views.setOnClickPendingIntent(R.id.webcamButton, getActivity(context, WebcamActivity.class));
+			views.setOnClickPendingIntent(R.id.reservationsButton, getActivity(context, ReservationsActivity.class));
 
 			appWidgetManager.updateAppWidget(appWidgetId, views);
 		}

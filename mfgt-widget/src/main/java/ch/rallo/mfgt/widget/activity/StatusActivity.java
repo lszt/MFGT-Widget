@@ -6,6 +6,7 @@ import android.webkit.WebView;
 import ch.rallo.mfgt.widget.R;
 import ch.rallo.mfgt.widget.bean.AerodromeStatus;
 import ch.rallo.mfgt.widget.utils.RequestSingleton;
+import ch.rallo.mfgt.widget.utils.StatusHtmlGenerator;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
