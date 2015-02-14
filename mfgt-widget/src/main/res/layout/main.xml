@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="wrap_content"
+	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:background="@android:color/white"
 	android:baselineAligned="true"
-	android:orientation="horizontal"
-	android:paddingBottom="5dp"
-	android:paddingLeft="3dp"
-	android:paddingRight="5dp"
-	android:paddingTop="5dp">
+	android:orientation="horizontal">
 
 	<ImageButton
 		android:id="@+id/logoButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:background="@android:color/transparent"
-		android:paddingRight="10dp"
-		android:src="@drawable/mfgt_logo" />
+		android:src="@drawable/mfgt_logo"
+		android:padding="7dp"
+		android:layout_weight="0.4"/>
 
 	<ImageButton
 		android:id="@+id/statusButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:adjustViewBounds="false"
 		android:background="@android:color/transparent"
-		android:baselineAlignBottom="false"
-		android:clickable="false"
-		android:cropToPadding="false"
-		android:paddingRight="7dp"
-		android:src="@drawable/status" />
+		android:src="@drawable/status"
+		android:layout_weight="0.2"
+		android:padding="7dp"/>
 
 	<ImageButton
 		android:id="@+id/webcamButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:background="@android:color/transparent"
-		android:paddingRight="7dp"
-		android:src="@drawable/webcam" />
+		android:src="@drawable/webcam"
+		android:layout_weight="0.2"
+		android:paddingLeft="9dp"
+		android:paddingTop="7dp"
+		android:paddingRight="5dp"
+		android:paddingBottom="7dp"/>
 
 	<ImageButton
 		android:id="@+id/reservationsButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:background="@android:color/transparent"
-		android:src="@drawable/reservations" />
+		android:src="@drawable/reservations"
+		android:layout_weight="0.2"
+		android:padding="7dp"/>
 
 </LinearLayout>
