@@ -44,7 +44,7 @@ public class WebcamFragment extends Fragment {
 			}
 		}, 0, 0, null, new Response.ErrorListener() {
 			public void onErrorResponse(VolleyError error) {
-				imageView.setImageResource(R.drawable.ic_launcher);
+				imageView.setImageResource(R.drawable.icon);
 			}
 		});
 
