@@ -1,6 +1,5 @@
 package ch.rallo.mfgt.widget.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 import ch.rallo.mfgt.widget.R;
@@ -15,7 +14,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class ReservationsActivity extends Activity {
+public class ReservationsActivity extends AbstractActivity {
 
 	private static final Type RESERVATION_LIST_TYPE = new TypeToken<List<Reservation>>() {}.getType();
 

@@ -1,6 +1,5 @@
 package ch.rallo.mfgt.widget.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import ch.rallo.mfgt.widget.R;
@@ -12,7 +11,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 
-public class StatusActivity extends Activity {
+public class StatusActivity extends AbstractActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
