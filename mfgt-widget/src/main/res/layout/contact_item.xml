@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:background="@android:color/white"
+			  android:paddingLeft="5dp"
+			  android:paddingRight="5dp"
+			  android:paddingTop="8dp"
+			  android:paddingBottom="8dp">
+
+	<ImageView
+		android:id="@+id/contactItemIcon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="5dp"/>
+
+	<TextView
+		android:id="@+id/contactItemLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:text="@+id/contactItemLabel"
+		android:textSize="18sp"
+		android:textColor="@android:color/black"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="5dp"
+		android:focusableInTouchMode="false"/>
+
+</LinearLayout>

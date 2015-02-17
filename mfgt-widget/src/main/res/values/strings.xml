@@ -1,7 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">MFGT Widget</string>
 	<string name="mfgt_url">http://www.mfgt.ch</string>
 	<string name="status_url">https://mfgt-api.appspot.com/api/v1/aerodromestatus</string>
 	<string name="reservations_url">https://mfgt-api.appspot.com/api/v1/reservations</string>
 	<string name="webcams">http://webcam.mfgt.ch/eh.jpg,http://webcam.mfgt.ch/wh.jpg</string>
+	<string name="contact_web">www.mfgt.ch</string>
+	<string name="contact_mail">info@mfgt.ch</string>
+	<string name="contact_phone">+41 52 366 33 33</string>
+	<string name="contact_address">Flugplatz, 9506 Lommis, Switzerland</string>
 </resources>

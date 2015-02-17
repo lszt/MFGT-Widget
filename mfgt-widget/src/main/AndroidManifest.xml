@@ -2,6 +2,7 @@
 	package="ch.rallo.mfgt.widget">
 
 	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
 
 	<application
 		android:allowBackup="true"
@@ -18,6 +19,7 @@
 				android:resource="@xml/widget" />
 		</receiver>
 
+		<activity android:name=".activity.ContactActivity" />
 		<activity android:name=".activity.StatusActivity" />
 		<activity android:name=".activity.WebcamActivity" />
 		<activity android:name=".activity.ReservationsActivity" />
