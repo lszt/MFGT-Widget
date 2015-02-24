@@ -19,10 +19,10 @@
 				android:resource="@xml/widget" />
 		</receiver>
 
-		<activity android:name=".activity.ContactActivity" />
-		<activity android:name=".activity.StatusActivity" />
-		<activity android:name=".activity.WebcamActivity" />
-		<activity android:name=".activity.ReservationsActivity" />
+		<activity android:name=".activity.ContactActivity" android:launchMode="singleInstance"/>
+		<activity android:name=".activity.StatusActivity" android:launchMode="singleInstance"/>
+		<activity android:name=".activity.WebcamActivity" android:launchMode="singleInstance"/>
+		<activity android:name=".activity.ReservationsActivity" android:launchMode="singleInstance"/>
 
 	</application>
 

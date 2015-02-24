@@ -1,5 +1,6 @@
 package ch.rallo.mfgt.widget.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import ch.rallo.mfgt.widget.bean.ContactItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContactActivity extends AbstractActivity {
+public class ContactActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

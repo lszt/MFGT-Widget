@@ -39,10 +39,4 @@ public class WebcamActivity extends FragmentActivity {
 
 		return fragments;
 	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-		this.finish();
-	}
 }
