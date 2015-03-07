@@ -2,7 +2,7 @@ package ch.rallo.mfgt.widget.utils;
 
 import ch.rallo.mfgt.widget.bean.AerodromeStatus;
 
-import static ch.rallo.mfgt.widget.utils.FormatUtils.formatDateTime;
+import static ch.rallo.mfgt.widget.utils.DateUtils.formatDateTime;
 
 public class StatusHtmlGenerator {
 

@@ -2,7 +2,7 @@ package ch.rallo.mfgt.widget.utils;
 
 import ch.rallo.mfgt.widget.bean.Reservation;
 
-import static ch.rallo.mfgt.widget.utils.FormatUtils.formatDateTime;
+import static ch.rallo.mfgt.widget.utils.DateUtils.formatReservationDate;
 
 public class ReservationDescriptionGenerator {
 
@@ -12,10 +12,13 @@ public class ReservationDescriptionGenerator {
 		this.reservation = reservation;
 	}
 
-	public String generate() {
-		return String.format("%s - %s\n%s",
-				formatDateTime(reservation.getReservationStart()),
-				formatDateTime(reservation.getReservationEnd()),
-				reservation.getPilot());
+	public String getTitle() {
+		return String.format("%s - %s",
+				formatReservationDate(reservation.getReservationStart()),
+				formatReservationDate(reservation.getReservationEnd()));
+	}
+
+	public String getDescription() {
+		return reservation.getPilot();
 	}
 }

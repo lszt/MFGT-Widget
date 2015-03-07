@@ -3,16 +3,16 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:background="@android:color/white">
+	android:background="@android:color/white"
+	android:padding="5dp">
 
 	<TextView
 		android:id="@+id/reservationTitle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="A List item title"
 		android:textSize="16sp"
 		android:textStyle="bold"
-		android:textColor="@android:color/black"/>
+		android:textColor="#444"/>
 
 	<TextView
 		android:id="@+id/reservationDescription"
@@ -21,8 +21,7 @@
 		android:layout_below="@+id/reservationTitle"
 		android:layout_marginTop="5dp"
 		android:maxLines="4"
-		android:text="The List item description"
 		android:textSize="14sp"
-		android:textColor="@android:color/black"/>
+		android:textColor="#444"/>
 
 </RelativeLayout>
