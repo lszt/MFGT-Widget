@@ -2,12 +2,14 @@ package ch.rallo.mfgt.widget.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import ch.rallo.mfgt.widget.R;
 import ch.rallo.mfgt.widget.bean.ContactItem;
+import com.google.common.base.Optional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +42,7 @@ public class ContactActivity extends Activity {
 
 		items.add(new ContactItem(R.drawable.globe, web, openBrowser(web)));
 		items.add(new ContactItem(R.drawable.envelope, mail, openMail(mail)));
-		items.add(new ContactItem(R.drawable.phone, phone, doPhoneCall(phone)));
+		items.add(new ContactItem(R.drawable.phone, phone, doPhoneCall(phone).orNull()));
 		items.add(new ContactItem(R.drawable.home, address));
 
 		return items;
@@ -78,15 +80,19 @@ public class ContactActivity extends Activity {
 		};
 	}
 
-	private static View.OnClickListener doPhoneCall(final String phoneNumber) {
-		return new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent phoneIntent = new Intent(Intent.ACTION_CALL);
-				phoneIntent.setData(Uri.parse("tel:" + phoneNumber));
-				phoneIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				v.getContext().startActivity(phoneIntent);
-			}
-		};
+	private Optional<View.OnClickListener> doPhoneCall(final String phoneNumber) {
+		View.OnClickListener onClickListener = null;
+		if (getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
+			onClickListener = new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					Intent phoneIntent = new Intent(Intent.ACTION_CALL);
+					phoneIntent.setData(Uri.parse("tel:" + phoneNumber));
+					phoneIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					v.getContext().startActivity(phoneIntent);
+				}
+			};
+		}
+		return Optional.fromNullable(onClickListener);
 	}
 }
