@@ -104,8 +104,10 @@ public class ReservationsAdapter extends BaseExpandableListAdapter {
 		groupHeader.setTypeface(null, Typeface.BOLD);
 		groupHeader.setText(headerTitle);
 
-		if (!Preferences.isReservationGroupCollapsed(context, headerTitle)) {
-			ExpandableListView expandableListView = (ExpandableListView) parent;
+		ExpandableListView expandableListView = (ExpandableListView) parent;
+		if (Preferences.isReservationGroupCollapsed(context, headerTitle)) {
+			expandableListView.collapseGroup(groupPosition);
+		} else {
 			expandableListView.expandGroup(groupPosition);
 		}
 

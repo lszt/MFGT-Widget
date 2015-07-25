@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import ch.rallo.mfgt.widget.R;
 import ch.rallo.mfgt.widget.bean.Reservation;
+import ch.rallo.mfgt.widget.utils.Preferences;
 import ch.rallo.mfgt.widget.utils.RequestSingleton;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -150,10 +151,25 @@ public class ReservationsActivity extends Activity {
 			TextView textView = (TextView) layout.getChildAt(0);
 			ExpandableListView expandableListView = (ExpandableListView) layout.getChildAt(1);
 
-			PageModel currentPage = mPageModel[position];
-
-			ReservationsAdapter adapter = new ReservationsAdapter(getApplicationContext());
+			final ReservationsAdapter adapter = new ReservationsAdapter(getApplicationContext());
 			expandableListView.setAdapter(adapter);
+
+			expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+				@Override
+				public void onGroupExpand(int groupPosition) {
+					String registration = adapter.getGroup(groupPosition);
+					Preferences.setReservationGroupCollapsed(getApplicationContext(), registration, false);
+				}
+			});
+			expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+				@Override
+				public void onGroupCollapse(int groupPosition) {
+					String registration = adapter.getGroup(groupPosition);
+					Preferences.setReservationGroupCollapsed(getApplicationContext(), registration, true);
+				}
+			});
+
+			PageModel currentPage = mPageModel[position];
 
 			currentPage.setTextView(textView);
 			currentPage.setExpandableListView(expandableListView, adapter);
@@ -193,7 +209,7 @@ public class ReservationsActivity extends Activity {
 
 		private void setReservations(PageModel pageModel, List<Reservation> reservations) {
 			pageModel.getAdapter().setReservations(reservations);
-			pageModel.getExpandableListView().setSelectionAfterHeaderView();
+			pageModel.getExpandableListView().setSelection(0);
 		}
 
 		private void loadReservations(final PageModel pageModel, LocalDate date) {
