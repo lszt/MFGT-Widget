@@ -27,7 +27,7 @@ public class StatusActivity extends Activity {
 			@Override
 			public void onResponse(String statusJson) {
 				AerodromeStatus status = new Gson().fromJson(statusJson, AerodromeStatus.class);
-				String html = new StatusHtmlGenerator(status).generate();
+				String html = new StatusHtmlGenerator(getApplication(), status).generate();
 				webView.loadData(html, "text/html", "UTF-8");
 			}
 		}, new Response.ErrorListener() {

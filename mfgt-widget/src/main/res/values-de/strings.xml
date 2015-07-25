@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="status_open">Offen</string>
+	<string name="status_restricted">Eingeschränkt</string>
+	<string name="status_closed">Geschlossen</string>
+</resources>

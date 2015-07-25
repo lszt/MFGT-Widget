@@ -6,9 +6,9 @@ import org.joda.time.format.DateTimeFormatter;
 
 public class DateUtils {
 
-	public static String formatDateTime(String dateTimeString) {
+	public static String formatDateTime(String dateTimeString, String style) {
 		DateTime dateTime = DateTime.parse(dateTimeString);
-		DateTimeFormatter formatter = DateTimeFormat.forStyle("MS");
+		DateTimeFormatter formatter = DateTimeFormat.forStyle(style);
 		return dateTime.toString(formatter);
 	}
 
