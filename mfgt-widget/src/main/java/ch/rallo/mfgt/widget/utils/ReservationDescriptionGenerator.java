@@ -1,8 +1,10 @@
 package ch.rallo.mfgt.widget.utils;
 
 import ch.rallo.mfgt.widget.bean.Reservation;
-
-import static ch.rallo.mfgt.widget.utils.DateUtils.formatReservationDate;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 public class ReservationDescriptionGenerator {
 
@@ -13,9 +15,15 @@ public class ReservationDescriptionGenerator {
 	}
 
 	public String getTitle() {
-		return String.format("%s - %s",
-				formatReservationDate(reservation.getReservationStart()),
-				formatReservationDate(reservation.getReservationEnd()));
+		DateTime start = DateTime.parse(reservation.getReservationStart());
+		DateTime end = DateTime.parse(reservation.getReservationEnd());
+
+		DateTimeFormatter formatter = DateTimeFormat.forStyle("MS");
+		if (new LocalDate(start).equals(new LocalDate(end))) {
+			formatter = DateTimeFormat.forStyle("-S");
+		}
+
+		return String.format("%s - %s", start.toString(formatter), end.toString(formatter));
 	}
 
 	public String getDescription() {
