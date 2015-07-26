@@ -40,10 +40,13 @@ public class ReservationsActivity extends Activity {
 	// we save each page in a model
 	private PageModel[] mPageModel = new PageModel[3];
 	private final Map<Integer, ReservationPage> reservationPages = Maps.newHashMap();
+	private LocalDate initialDate;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		initialDate = LocalDate.now();
 
 		setContentView(R.layout.reservations);
 		// initializing the model
@@ -123,7 +126,7 @@ public class ReservationsActivity extends Activity {
 	private void initPageModel() {
 		for (int i = 0; i < mPageModel.length; i++) {
 			// initing the pagemodel with indexes of -1, 0 and 1
-			mPageModel[i] = new PageModel(i - 1);
+			mPageModel[i] = new PageModel(initialDate, i - 1);
 		}
 	}
 
@@ -195,16 +198,17 @@ public class ReservationsActivity extends Activity {
 
 		public ReservationPage(int index) {
 			this.index = index;
-			this.date = LocalDate.now().plusDays(index);
+			this.date = initialDate.plusDays(index);
 		}
 
 		public void setTo(PageModel pageModel) {
 			pageModel.getTextView().setText(pageModel.getText());
-			if (reservations == null) {
-				loadReservations(pageModel, date);
-			} else {
+			if (reservations != null) {
 				setReservations(pageModel, reservations);
 			}
+
+			// load reservations in each case
+			loadReservations(pageModel, date);
 		}
 
 		private void setReservations(PageModel pageModel, List<Reservation> reservations) {

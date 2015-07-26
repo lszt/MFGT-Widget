@@ -7,12 +7,14 @@ import org.joda.time.format.DateTimeFormat;
 
 public class PageModel {
 
+	private final LocalDate initialDate;
 	private int index;
 	private TextView textView;
 	private ExpandableListView expandableListView;
 	private ReservationsAdapter adapter;
 
-	public PageModel(int index) {
+	public PageModel(LocalDate initialDate, int index) {
+		this.initialDate = initialDate;
 		this.index = index;
 		setIndex(index);
 	}
@@ -26,8 +28,7 @@ public class PageModel {
 	}
 
 	public String getText() {
-		LocalDate today = LocalDate.now();
-		LocalDate requestedDate = today.plusDays(index);
+		LocalDate requestedDate = initialDate.plusDays(index);
 		return requestedDate.toString(DateTimeFormat.forStyle("F-"));
 	}
 
