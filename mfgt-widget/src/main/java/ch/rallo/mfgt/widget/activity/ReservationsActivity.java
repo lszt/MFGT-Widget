@@ -50,7 +50,7 @@ public class ReservationsActivity extends Activity {
 		initPageModel();
 
 		mInflater = getLayoutInflater();
-		MyagerAdaper adapter = new MyagerAdaper();
+		ReservationsPagerAdaper adapter = new ReservationsPagerAdaper();
 
 		final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 		viewPager.setAdapter(adapter);
@@ -127,7 +127,7 @@ public class ReservationsActivity extends Activity {
 		}
 	}
 
-	private class MyagerAdaper extends PagerAdapter {
+	private class ReservationsPagerAdaper extends PagerAdapter {
 
 		@Override
 		public int getItemPosition(Object object) {
@@ -232,6 +232,4 @@ public class ReservationsActivity extends Activity {
 			RequestSingleton.getInstance(ReservationsActivity.this).addToRequestQueue(request);
 		}
 	}
-
-
 }
