@@ -3,4 +3,5 @@
 	<string name="status_open">Offen</string>
 	<string name="status_restricted">Eingeschränkt</string>
 	<string name="status_closed">Geschlossen</string>
+	<string name="reservation_waiting_label">Warteliste</string>
 </resources>

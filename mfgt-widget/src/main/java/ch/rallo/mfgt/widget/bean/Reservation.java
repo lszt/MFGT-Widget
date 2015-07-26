@@ -16,6 +16,9 @@ public class Reservation {
 	@SerializedName("ReservationEnd")
 	private String reservationEnd;
 
+	@SerializedName("ReservationStatus")
+	private String reservationStatus;
+
 	public String getRegistration() {
 		return registration;
 	}
@@ -46,5 +49,13 @@ public class Reservation {
 
 	public void setReservationEnd(String reservationEnd) {
 		this.reservationEnd = reservationEnd;
+	}
+
+	public String getReservationStatus() {
+		return reservationStatus;
+	}
+
+	public void setReservationStatus(String reservationStatus) {
+		this.reservationStatus = reservationStatus;
 	}
 }

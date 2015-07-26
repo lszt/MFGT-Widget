@@ -64,7 +64,14 @@ public class ReservationsAdapter extends BaseExpandableListAdapter {
 
 		Reservation reservation = getChild(groupPosition, childPosition);
 
-		ReservationDescriptionGenerator descGenerator = new ReservationDescriptionGenerator(reservation);
+		ReservationDescriptionGenerator descGenerator = new ReservationDescriptionGenerator(context, reservation);
+
+		reservationTitle.setTypeface(null, descGenerator.getTitleTypefaceStyle());
+		reservationDescription.setTypeface(null, descGenerator.getDescriptionTypefaceStyle());
+
+		int textColor = descGenerator.getTextColor();
+		reservationTitle.setTextColor(textColor);
+		reservationDescription.setTextColor(textColor);
 
 		reservationTitle.setText(descGenerator.getTitle());
 		reservationDescription.setText(descGenerator.getDescription());
