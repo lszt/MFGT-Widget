@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.bean;
+package ch.mfgt.android.widget.bean;
 
 import com.google.gson.annotations.SerializedName;
 

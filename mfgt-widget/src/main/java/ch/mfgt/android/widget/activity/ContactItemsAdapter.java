@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.activity;
+package ch.mfgt.android.widget.activity;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import ch.rallo.mfgt.widget.R;
-import ch.rallo.mfgt.widget.bean.ContactItem;
+import ch.mfgt.android.widget.R;
+import ch.mfgt.android.widget.bean.ContactItem;
 
 public class ContactItemsAdapter extends ArrayAdapter<ContactItem> {
 

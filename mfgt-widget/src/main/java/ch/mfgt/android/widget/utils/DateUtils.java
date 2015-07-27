@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.utils;
+package ch.mfgt.android.widget.utils;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;

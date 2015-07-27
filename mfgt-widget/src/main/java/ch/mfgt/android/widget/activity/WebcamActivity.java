@@ -1,10 +1,10 @@
-package ch.rallo.mfgt.widget.activity;
+package ch.mfgt.android.widget.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import ch.rallo.mfgt.widget.R;
+import ch.mfgt.android.widget.R;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;

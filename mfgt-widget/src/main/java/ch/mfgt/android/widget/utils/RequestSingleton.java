@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.utils;
+package ch.mfgt.android.widget.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -1,12 +1,12 @@
-package ch.rallo.mfgt.widget.utils;
+package ch.mfgt.android.widget.utils;
 
 import android.content.Context;
-import ch.rallo.mfgt.widget.R;
-import ch.rallo.mfgt.widget.bean.AerodromeStatus;
+import ch.mfgt.android.widget.R;
+import ch.mfgt.android.widget.bean.AerodromeStatus;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import static ch.rallo.mfgt.widget.utils.DateUtils.formatDateTime;
+import static ch.mfgt.android.widget.utils.DateUtils.formatDateTime;
 
 public class StatusHtmlGenerator {
 

@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.activity;
+package ch.mfgt.android.widget.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,8 +7,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import ch.rallo.mfgt.widget.R;
-import ch.rallo.mfgt.widget.bean.ContactItem;
+import ch.mfgt.android.widget.R;
+import ch.mfgt.android.widget.bean.ContactItem;
 import com.google.common.base.Optional;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.activity;
+package ch.mfgt.android.widget.activity;
 
 import android.widget.ExpandableListView;
 import android.widget.TextView;

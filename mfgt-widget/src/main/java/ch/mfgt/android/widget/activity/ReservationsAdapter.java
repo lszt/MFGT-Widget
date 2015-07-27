@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.activity;
+package ch.mfgt.android.widget.activity;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
-import ch.rallo.mfgt.widget.R;
-import ch.rallo.mfgt.widget.bean.Reservation;
-import ch.rallo.mfgt.widget.utils.DateUtils;
-import ch.rallo.mfgt.widget.utils.Preferences;
-import ch.rallo.mfgt.widget.utils.ReservationDescriptionGenerator;
+import ch.mfgt.android.widget.R;
+import ch.mfgt.android.widget.bean.Reservation;
+import ch.mfgt.android.widget.utils.DateUtils;
+import ch.mfgt.android.widget.utils.Preferences;
+import ch.mfgt.android.widget.utils.ReservationDescriptionGenerator;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 

@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.activity;
+package ch.mfgt.android.widget.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import ch.rallo.mfgt.widget.R;
-import ch.rallo.mfgt.widget.bean.Reservation;
-import ch.rallo.mfgt.widget.utils.Preferences;
-import ch.rallo.mfgt.widget.utils.RequestSingleton;
+import ch.mfgt.android.widget.R;
+import ch.mfgt.android.widget.bean.Reservation;
+import ch.mfgt.android.widget.utils.Preferences;
+import ch.mfgt.android.widget.utils.RequestSingleton;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;

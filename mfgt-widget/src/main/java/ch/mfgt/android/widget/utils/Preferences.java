@@ -1,8 +1,8 @@
-package ch.rallo.mfgt.widget.utils;
+package ch.mfgt.android.widget.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import ch.rallo.mfgt.widget.R;
+import ch.mfgt.android.widget.R;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Sets;

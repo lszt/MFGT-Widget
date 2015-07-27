@@ -1,10 +1,10 @@
-package ch.rallo.mfgt.widget.utils;
+package ch.mfgt.android.widget.utils;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import ch.rallo.mfgt.widget.R;
-import ch.rallo.mfgt.widget.bean.Reservation;
+import ch.mfgt.android.widget.R;
+import ch.mfgt.android.widget.bean.Reservation;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;

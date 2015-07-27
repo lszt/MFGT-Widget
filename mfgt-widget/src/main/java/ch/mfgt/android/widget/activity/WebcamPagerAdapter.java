@@ -1,4 +1,4 @@
-package ch.rallo.mfgt.widget.activity;
+package ch.mfgt.android.widget.activity;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
