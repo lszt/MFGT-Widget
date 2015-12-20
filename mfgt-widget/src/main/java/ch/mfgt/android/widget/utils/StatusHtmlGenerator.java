@@ -3,8 +3,10 @@ package ch.mfgt.android.widget.utils;
 import android.content.Context;
 import ch.mfgt.android.widget.R;
 import ch.mfgt.android.widget.bean.AerodromeStatus;
+import com.google.common.base.Strings;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 import static ch.mfgt.android.widget.utils.DateUtils.formatDateTime;
 
@@ -23,9 +25,7 @@ public class StatusHtmlGenerator {
 		html.append("<span style=\"font-weight: bold; font-size: 1.3em;\">")
 				.append(getStatusLabel(status.getStatus()))
 				.append("</span><br><br>");
-		if (hasMessage(status)) {
-			html.append(status.getMessage());
-		}
+		appendMessage(html, status.getMessage());
 		html.append(formatDateTime(status.getLastUpdateDate(), "FS"))
 				.append(", ")
 				.append(status.getLastUpdateBy());
@@ -45,9 +45,18 @@ public class StatusHtmlGenerator {
 		}
 	}
 
-	private boolean hasMessage(AerodromeStatus status) {
-		Document doc = Jsoup.parse(status.getMessage());
-		String text = doc.text().trim();
-		return text.length() == 0;
+	private void appendMessage(StringBuilder html, String message) {
+		if (!Strings.isNullOrEmpty(message)) {
+			Document doc = Jsoup.parse(message);
+			for (Element element : doc.body().children()) {
+				if (element.isBlock() && !isEmptyElement(element)) {
+					html.append(element.outerHtml());
+				}
+			}
+		}
+	}
+
+	private boolean isEmptyElement(Element element) {
+		return element.text().replaceAll("\u00A0+", " ").trim().isEmpty();
 	}
 }
