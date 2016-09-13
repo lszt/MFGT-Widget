@@ -217,7 +217,7 @@ public class ReservationsActivity extends Activity {
 		}
 
 		private void loadReservations(final PageModel pageModel, LocalDate date) {
-			String dateString = date.toString("yyyyMMdd");
+			String dateString = date.toString("yyyy-MM-dd");
 
 			String requestUrl = getApplication().getString(R.string.reservations_url) + "/" + dateString;
 			StringRequest request = new StringRequest(requestUrl, new Response.Listener<String>() {
