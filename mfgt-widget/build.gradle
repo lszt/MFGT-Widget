@@ -12,6 +12,9 @@ repositories {
     mavenCentral()
 }
 
+def Properties properties = new Properties()
+properties.load(project.rootProject.file("local.properties").newDataInputStream())
+
 android {
     compileSdkVersion 19
     buildToolsVersion "21.1.2"
@@ -26,8 +29,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    signingConfigs {
+        release {
+            storeFile file(properties.getProperty("mfgt.releaseStoreFile"))
+            storePassword properties.getProperty("mfgt.releaseStorePassword")
+            keyAlias properties.getProperty("mfgt.releaseKeyAlias")
+            keyPassword properties.getProperty("mfgt.releaseKeyPassword")
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
