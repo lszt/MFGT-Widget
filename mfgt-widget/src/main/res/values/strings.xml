@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">MFGT Widget</string>
-	<string name="mfgt_url">http://www.mfgt.ch</string>
-	<string name="status_url">https://api.mfgt.ch/api/v1/aerodromestatus</string>
-	<string name="reservations_url">https://api.mfgt.ch/api/v1/reservations</string>
-	<string name="webcams">http://webcam.mfgt.ch/eh.jpg,http://webcam.mfgt.ch/wh.jpg</string>
-	<string name="contact_web">www.mfgt.ch</string>
-	<string name="contact_mail">info@mfgt.ch</string>
-	<string name="contact_phone">+41 52 366 33 33</string>
-	<string name="contact_address">Flugplatz, 9506 Lommis, Switzerland</string>
-	<string name="preference_file_key">ch.mfgt.android.widget.PREFERENCE_FILE_KEY</string>
+	<string name="app_name" translatable="false">MFGT Widget</string>
+	<string name="mfgt_url" translatable="false">http://www.mfgt.ch</string>
+	<string name="status_url" translatable="false">https://api.mfgt.ch/api/v1/aerodromestatus</string>
+	<string name="reservations_url" translatable="false">https://api.mfgt.ch/api/v1/reservations</string>
+	<string name="webcams" translatable="false">http://webcam.mfgt.ch/eh.jpg,http://webcam.mfgt.ch/wh.jpg</string>
+	<string name="contact_web" translatable="false">www.mfgt.ch</string>
+	<string name="contact_mail" translatable="false">info@mfgt.ch</string>
+	<string name="contact_phone" translatable="false">+41 52 366 33 33</string>
+	<string name="contact_address" translatable="false">Flugplatz, 9506 Lommis, Switzerland</string>
+	<string name="preference_file_key" translatable="false">ch.mfgt.android.widget.PREFERENCE_FILE_KEY</string>
 	<string name="status_open">Open</string>
 	<string name="status_restricted">Restricted</string>
 	<string name="status_closed">Closed</string>
-	<string name="reservation_waiting_text_color">#999999</string>
-	<string name="reservation_text_color">#444444</string>
+	<string name="reservation_waiting_text_color" translatable="false">#999999</string>
+	<string name="reservation_text_color" translatable="false">#444444</string>
 	<string name="reservation_waiting_label">Waiting list</string>
 </resources>
