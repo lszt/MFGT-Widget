@@ -47,16 +47,8 @@ public class StatusHtmlGenerator {
 
 	private void appendMessage(StringBuilder html, String message) {
 		if (!Strings.isNullOrEmpty(message)) {
-			Document doc = Jsoup.parse(message);
-			for (Element element : doc.body().children()) {
-				if (element.isBlock() && !isEmptyElement(element)) {
-					html.append(element.outerHtml());
-				}
-			}
+			message = message.replaceAll("(\r\n|\n)", "<br>");
+			html.append(message).append("<br><br>");
 		}
-	}
-
-	private boolean isEmptyElement(Element element) {
-		return element.text().replaceAll("\u00A0+", " ").trim().isEmpty();
 	}
 }
